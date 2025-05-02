@@ -24,14 +24,20 @@ namespace Basic_Calculator
             Console.WriteLine("Please enter your first number \n ");
             
             // Hold user response in varialbe and convert string to int
-            number1 = Convert.ToInt32(Console.ReadLine());
-
+            // Add error handling, if isn't int then display message
+           while (!int.TryParse(Console.ReadLine(), out number1))
+            {
+                Console.WriteLine("Input must be a whole number. Please try again");
+            }
+          
             // Tell user to insert another number
             Console.WriteLine("Please enter your second number \n ");
 
             // Hold user second response in variable and convert string to int
-
-            number2 = Convert.ToInt32(Console.ReadLine());
+            while (!int.TryParse(Console.ReadLine(), out number2))
+            {
+                Console.WriteLine("Input must be a whole number. Please try again");
+            }
 
             // Handle operation to numbers
 
