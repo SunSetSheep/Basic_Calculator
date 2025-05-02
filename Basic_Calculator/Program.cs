@@ -15,6 +15,8 @@ namespace Basic_Calculator
             int number1;
             int number2;
 
+            string operationDecision;
+
             // Message to display to user on start
             Console.WriteLine("Welcome to the calculator ! \n");
 
@@ -33,11 +35,13 @@ namespace Basic_Calculator
 
             // Handle operation to numbers
 
-            
+            Console.WriteLine("How do you want to calculate the numbers ? \n ");
+            Console.WriteLine("Enter A to add the numbers, S to subtract the numbers, M to multiple the numbers and D to divide the numbers. \n ");
+
+            operationDecision = Console.ReadLine();
 
 
-
-            // Key console open
+            // Keep console open
             Console.ReadKey();
 
 
