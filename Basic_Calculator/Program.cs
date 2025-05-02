@@ -22,7 +22,7 @@ namespace Basic_Calculator
 
 
             // Message to display to user on start
-            Console.WriteLine("Welcome to the calculator ! \n");
+            Console.WriteLine("\t\t\tWelcome to the calculator ! \n");
 
             // Tell user to insert a number 
             Console.WriteLine("Please enter your first number \n ");
