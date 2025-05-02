@@ -14,8 +14,12 @@ namespace Basic_Calculator
             // Set variables to store user input
             int number1;
             int number2;
+            // Result from calculation
+            int result;
 
+            // Calculate operator 
             string operationDecision;
+
 
             // Message to display to user on start
             Console.WriteLine("Welcome to the calculator ! \n");
@@ -36,7 +40,7 @@ namespace Basic_Calculator
             // Hold user second response in variable and convert string to int
             while (!int.TryParse(Console.ReadLine(), out number2))
             {
-                Console.WriteLine("Input must be a whole number. Please try again");
+                Console.WriteLine("Input must be a whole number. Please try again \n ");
             }
 
             // Handle operation to numbers
@@ -46,6 +50,26 @@ namespace Basic_Calculator
 
             operationDecision = Console.ReadLine();
 
+           
+            if (operationDecision == "A" || operationDecision == "a")
+            {
+                result = number1 + number2;
+            }
+            else if (operationDecision == "S" || operationDecision == "s")
+            {
+                result = number1 - number2;
+            }
+            else if (operationDecision == "M" || operationDecision == "m")
+            {
+                result = number1 * number2;
+            }
+            else
+            {
+                result = number1 / number2;
+            }
+
+            // Inject result into console along with message
+            Console.WriteLine("The result is :" + result);
 
             // Keep console open
             Console.ReadKey();
